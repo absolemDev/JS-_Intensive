@@ -111,7 +111,7 @@
 6. Решeние:
    ```
    const res = "B" + "a" + (1 - "hello")
-   console.log(res) // "BaNuN"
+   console.log(res) // "BaNaN"
    ```
    
    ```
