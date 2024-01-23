@@ -6,3 +6,27 @@
 ![basics](https://github.com/absolemDev/JS_Intensive/assets/118248658/5cc68e69-bd97-4005-b3df-02d4019cbead)
 
 ![remote repositories](https://github.com/absolemDev/JS_Intensive/assets/118248658/151da660-04ef-4ed1-9ea3-4dfd59b09e39)
+
+## Занятие 3.
+
+__Задание 1__
+```js
+const counter = {}
+```
+```js
+const counter = new Object()
+```
+```js
+const counter = Object.assign({}, {})
+```
+```js
+const counter = Object.create({}, {})
+```
+```js
+function Counter() {}
+const counter = new Counter()
+```
+```js
+class Counter {}
+const counter = new Counter()
+```
