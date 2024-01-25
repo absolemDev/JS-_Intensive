@@ -101,6 +101,6 @@ function deepEqual(obj1, obj2) {
 __Бонус. Задание 2__
 ```js
 function reverseStr(str) {
-  return str.split("").reverse().join("")
+  return Array.from(str).reverse().join("")
 }
 ```
