@@ -17,7 +17,7 @@ const counter = {}
 const counter = new Object()
 ```
 ```js
-const counter = Object.create({}, {})
+const counter = Object.create(Object.prototype)
 ```
 ```js
 const counter = Object.assign({}, {})
