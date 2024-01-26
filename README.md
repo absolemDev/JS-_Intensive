@@ -1,8 +1,23 @@
 # JS Интенсив
-## Занятие 1. Основы Git
+## Занятие 4
 
-![last](https://github.com/absolemDev/JS_Intensive/assets/118248658/2d4ad26e-5e12-4fa3-a6bf-ef1306b905cf)
+```js
+function bindingFunction(func, thisArg, ...args) {
+  const scope = Object.assign({}, thisArg)
+  scope._this = func
+  return function(...newArgs) {
+    scope._this(...args, ...newArgs)
+  }
+}
 
-![basics](https://github.com/absolemDev/JS_Intensive/assets/118248658/5cc68e69-bd97-4005-b3df-02d4019cbead)
+function logger(a) {
+    console.log(`I output only external context: ${this.item}`);
+}
 
-![remote repositories](https://github.com/absolemDev/JS_Intensive/assets/118248658/151da660-04ef-4ed1-9ea3-4dfd59b09e39)
+const obj = { item: "some value" }
+
+const bindLogger = bindingFunction(logger, obj)
+
+bindLogger()
+```
+
