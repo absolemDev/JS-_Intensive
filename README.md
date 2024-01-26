@@ -10,7 +10,7 @@ function bindingFunction(func, thisArg, ...args) {
   }
 }
 
-function logger(a) {
+function logger() {
     console.log(`I output only external context: ${this.item}`);
 }
 
@@ -18,6 +18,6 @@ const obj = { item: "some value" }
 
 const bindLogger = bindingFunction(logger, obj)
 
-bindLogger()
+bindLogger() // "I output only external context: some value"
 ```
 
