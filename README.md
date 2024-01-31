@@ -133,3 +133,34 @@ class PersonThree extends Person {
   }
 }
 ```
+
+__Бонус. Задание 1__
+
+```js
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+total = 13;
+
+const firstSum = (arr, total) => {
+  for (let i = 0; i < arr.length - 2; i++) {
+    let start = i + 1
+    let end = arr.length - 1
+    while (start <= end) {
+      const mid = Math.round((end - start) / 2) + start
+      if (arr[i] + arr[mid] === total) return [arr[i], arr[mid]]
+      if (arr[i] + arr[mid] < total) {
+        start = mid
+      } else {
+        end = mid
+      }
+      if (start === end) break
+    }
+  }
+  return "No such sum"
+}
+
+console.log(firstSum(arr,total)) //result = [4, 9]
+```
+
+__Бонус. Задание 2__
+
+Сложность алгоритма `O((n - 1) * log(n))`
