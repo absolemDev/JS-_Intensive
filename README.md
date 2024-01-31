@@ -144,7 +144,7 @@ const firstSum = (arr, total) => {
   for (let i = 0; i < arr.length - 2; i++) {
     let start = i + 1
     let end = arr.length - 1
-    while (start <= end) {
+    do {
       const mid = Math.round((end - start) / 2) + start
       if (arr[i] + arr[mid] === total) return [arr[i], arr[mid]]
       if (arr[i] + arr[mid] < total) {
@@ -152,8 +152,7 @@ const firstSum = (arr, total) => {
       } else {
         end = mid
       }
-      if (start === end) break
-    }
+    } while (start < end)
   }
   return "No such sum"
 }
